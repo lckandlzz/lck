@@ -1,4 +1,4 @@
-$(function(){
+/$(function(){
 	setTimeout(function(){
 		 var h = $(document).height()-$(window).height();
 		var step=0.5;
