@@ -1,0 +1,82 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+	    display: block;
+   
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+body {
+    background: #fff;
+    color: #393939;
+    font-family: "Myriad Pro",Arial,FZLanTingHei-R-GBK,"方正兰亭黑","Microsoft YaHei","微软雅黑",STHeiti,"华文黑体",SimSun,"宋体",sans-serif;
+    line-height: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+::selection {
+    background: #2aad6f;
+    color: #FFF;
+}
+.main-header .upper-area {
+    background: #009B72;
+    color: #FFF;
+    min-height: 10px;
+    font-size: 13px;
+    font-size: .8125rem;}
+    
+    @media only screen and (min-width: 61.875em)
+.main-header .upper-area .log-area li, .main-header .upper-area li+li {
+    border-left: 1px solid #47b488;
+}
+@media only screen and (min-width: 61.875em)
+.main-header .upper-area a {
+    display: block;
+    padding: 6px 20px 5px;
+    min-height: 28px;
+}
+.main-header .upper-area a {
+    color: #FFF;
+}
+a {
+    cursor: pointer;
+      color: inherit;
+    text-decoration: none;
+    background: 0 0;
+    font-size: 0.8125rem;
+}
+
+div{
+	display: block;
+}
+.main-header {
+    position: relative;
+    z-index: 100;
+}
+.main-header .upper-area {
+    background: #009B72;
+    color: #FFF;
+    min-height: 10px;
+    font-size: 13px;
+    font-size: .8125rem;
+}
+.wrapper {
+    display: block;
+    text-align: right;
+        padding: 0 .75rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.g>*, .gi {
+    letter-spacing: normal;
+}
+.gi {
+    display: inline-block;
+    vertical-align: top;
+}
