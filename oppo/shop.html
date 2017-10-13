@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		
+		<link rel="stylesheet" type="text/css" href="css/shops.css" />
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
+		<script src="js/lib.min.js"></script>
+		<script type="text/javascript" src="js/shop_a.js">
+			
+		</script>
+	</head>
+
+	<body>
+		<div class="title">
+			<ul>
+				<li>
+					<a href="login.html" style="color: #fff;">登录</a>
+				</li>
+
+				<li>
+					<a href="register.html"style="color: #fff;" >注册</a>
+				</li>
+
+				<li> 
+					Global
+				</li>
+			</ul>
+		</div>
+		<div class="top_top">
+			<img id="cv" src="Images/Image1.png" style="cursor: pointer;" />
+			<a href="index.html">
+				<img alt="logo" style="height: 19px;" src="Images/logo.svg" />
+			</a>
+			<img id="cth" style="width: 25px;height: 25px;float: right;position: relative;right: 19px;top: 5px; cursor: pointer;" src="Images/icon-menu-user.png" />
+		</div>
+		<div>
+			<div style="display: none;" id="navigation">
+				<ul>
+					
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						产品 
+					</li>
+					<li > 
+						商城
+					</li>
+					<li> 
+						体验店
+					</li>
+					<li>
+						服务
+					</li>
+					<li>
+						colorOS
+					</li>
+					<li>
+						社区
+					</li>
+					<li>
+						Global
+					</li>
+
+				</ul>
+			</div>
+			<div style="z-index: 999;"  style="display: none;"  id="information">
+				<ul>
+					<li>
+						我的订单
+					</li> 
+					<li>
+						账户信息
+					</li>
+					<li>
+						配送地址
+					</li>
+					<li>
+						购物车
+					</li>
+					<li>
+						登录
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="top_logo">
+			<img src="Images/Image2.png" />
+			<ul>
+				<li>
+					<a href="index.html">首页</a>
+				</li>
+				<li>
+					产品
+				</li>
+				<li>
+					商城<br />
+
+				</li>
+				<li style="color: #393939; border-bottom: 3px #2aad6f solid;">
+					<a href="shop.html">体验店</a>
+					
+					
+				</li>
+				<li>
+					<a href="service.html">服务</a>
+				</li>
+
+				<li>
+					Global
+				</li>
+				<li>
+					社区
+				</li>
+			</ul>
+		</div>
+		<main>
+			<ul class="breadcrumb">
+				<li>
+					<a href="">首页<span>/</span></a>
+				</li>
+				<li>
+					体验店
+				</li>
+			</ul>
+
+		</main>
+		<section class="shopsbanner">
+			<div class="search-store-wrapper">
+				<form action="" class="search-store">
+					<div class="input-button-item">
+						<input type="text" name="q" value="海口市" placeholder="请输入城市或体验店名称">
+						<button class="button" type="submit">搜索</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<!--搜索-->
+		<div class="slab-white">
+			<div class="wrapper">
+				<!-- <div class='location-directory'> -->
+
+				<div class="" id="select_cities_shops">
+					<span class="tips">请选择查询的城市：</span>
+					<div class="uiop">
+						<span class="icon icon-grey-arrow-down"></span>
+						<select id="select" name="province_id">
+							<option value="0">请选择</option>
+							<option value="110000" selected="">海南省</option>
+							<option value="500000">重庆市</option>
+							<option value="310000">上海市</option>
+							<option value="120000">天津市</option>
+							<option value="340000">安徽省</option>
+							<option value="350000">福建省</option>
+							<option value="620000">甘肃省</option>
+							<option value="440000">广东省</option>
+							<option value="450000">广西壮族自治区</option>
+							<option value="520000">贵州省</option>
+							<option value="460000">海南省</option>
+							<option value="130000">河北省</option>
+							<option value="410000">河南省</option>
+							<option value="230000">黑龙江省</option>
+							<option value="420000">湖北省</option>
+							<option value="430000">湖南省</option>
+							<option value="220000">吉林省</option>
+							<option value="320000">江苏省</option>
+							<option value="360000">江西省</option>
+							<option value="210000">辽宁省</option>
+							<option value="150000">内蒙古自治区</option>
+							<option value="640000">宁夏回族自治区</option>
+							<option value="630000">青海省</option>
+							<option value="370000">山东省</option>
+							<option value="140000">山西省</option>
+							<option value="610000">陕西省</option>
+							<option value="510000">四川省</option>
+							<option value="540000">西藏自治区</option>
+							<option value="650000">新疆维吾尔自治区</option>
+							<option value="530000">云南省</option>
+							<option value="330000">浙江省</option>
+						</select>
+						<a class="select webkit webkit53 not_msie custom-form_select responsive_select"><span class="select_content"><span class="select_button"><span class="select_button_icon"></span></span><span class="select_label"></span>
+							</span>
+						</a>
+					</div>
+					<div class="uiop">
+						<span class="icon icon-grey-arrow-down"></span>
+						<select id="select" name="city_id">
+							<option value="110100" selected="">海口市</option>
+						</select>
+						<a class="select webkit webkit53 not_msie custom-form_select responsive_select"><span class="select_content"><span class="select_button"><span class="select_button_icon"></span></span><span class="select_label"></span>
+							</span>
+						</a>
+					</div>
+					<div class="uiop">
+						<span class="icon icon-grey-arrow-down"></span>
+						<select id="select" name="level_id">
+							<option value="0" selected="">所有门店类型</option>
+							<option value="10">品牌形象店</option>
+							<option value="20">旗舰店</option>
+							<option value="30">体验店</option>
+							<option value="40">市县专卖店</option>
+							<option value="50">乡镇专卖店</option>
+						</select>
+						<a class="select webkit webkit53 not_msie custom-form_select responsive_select"><span class="select_content"><span class="select_button"><span class="select_button_icon"></span></span><span class="select_label"></span>
+							</span>
+						</a>
+					</div>
+				</div>
+				<!-- </div> -->
+			</div>
+		</div>
+
+		<!--地图-->
+		<div class="map">
+			<div class="yyyyy">
+				<div class="map_s">
+					<iframe src="baidumap.html" width="98%" height="380" frameborder="0" scrolling="no" style="margin: 0 auto;"></iframe>
+				</div>
+				<div class="map_t">
+					<section>
+						<h2 class="h-delta">标准服务</h2>
+						<ul class="icon-list shops-icons">
+							<li>
+								<span class="icon-wrapper">
+                  <span class="icons-shops icon-shop-sjjyz"></span>
+								</span>
+								免费充电
+							</li>
+							<li>
+								<span class="icon-wrapper">
+                  <span class="icons-shops icon-shop-sx"></span>
+								</span>
+								手机保养+维护
+							</li>
+							<li>
+								<span class="icon-wrapper">
+                  <span class="icons-shops icon-shop-wificl"></span>
+								</span>
+								免费WIFI
+							</li>
+							<li>
+								<span class="icon-wrapper">
+                  <span class="icons-shops icon-shop-mfcy"></span>
+								</span>
+								免费畅饮
+							</li>
+						</ul>
+						<h2 class="h-delta">会员服务</h2>
+						<ul class="icon-list shops-icons">
+							<li>
+								<span class="icon-wrapper">
+                  <span class="icons-shops icon-shop-sjtm"></span>
+								</span>
+								手机贴膜
+							</li>
+							<li>
+								<span class="icon-wrapper">
+                  <span class="icons-shops icon-shop-hyjf"></span>
+								</span>
+								积分兑换礼品
+							</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+
+		</div>
+		<div class="tydz">
+			<!--体验店地址-->
+			<div class="location-address">
+				<h3 class="h-gamma"> 海口市 · 旗舰店（3）</h3>
+				<ul class="list-store slab-white-border">
+
+					<li class="store-location js-collapse">
+						<span class="marker">1</span>
+						<div class="dadi">
+							<div class="daop">
+								<p>
+									<strong>海南大道二店</strong>
+								</p>
+								<p>
+									<a class="view-details" href="">查看详情</a>
+								</p>
+							</div>
+
+							<div class="daop">
+								<p> 旗舰店</p>
+							</div>
+							<div class="daop">
+								<p>秀全大道7号7-8</p>
+							</div>
+
+							<div class="daopc">
+								<p>020-89681805</p>
+							</div>
+
+						</div>
+					</li>
+					<li class="store-location js-collapse">
+						<span class="marker">2</span>
+						<div class="dadi">
+							<div class="daop">
+								<p>
+									<strong>海南大道二店</strong>
+								</p>
+								<p>
+									<a class="view-details" href="">查看详情</a>
+								</p>
+							</div>
+
+							<div class="daop">
+								<p> 旗舰店</p>
+							</div>
+							<div class="daop">
+								<p>秀全大道7号7-8</p>
+							</div>
+
+							<div class="daopc">
+								<p>020-89681805</p>
+							</div>
+
+						</div>
+					</li>
+					<li class="store-location js-collapse">
+						<span class="marker">3</span>
+						<div class="dadi">
+							<div class="daop">
+								<p>
+									<strong>海南大道二店</strong>
+								</p>
+								<p>
+									<a class="view-details" href="">查看详情</a>
+								</p>
+							</div>
+
+							<div class="daop">
+								<p> 旗舰店</p>
+							</div>
+							<div class="daop">
+								<p>秀全大道7号7-8</p>
+							</div>
+
+							<div class="daopc">
+								<p>020-89681805</p>
+							</div>
+
+						</div>
+					</li>
+				</ul>
+
+			</div>
+			<div class="iph">
+				<h1>1</h1>
+				<ul>
+					<strong style="line-height: 60px;">海南大道二店</strong>
+
+					<li>品牌形象店</li>
+					<li>广东省广州市天河区天河城四楼422-425</li>
+					<li>020-85585165</li>
+				</ul>
+				<a>查看详情</a>
+			</div>
+			<div class="iph">
+				<h1>1</h1>
+				<ul>
+					<strong style="line-height: 60px;">海南大道二店</strong>
+
+					<li>品牌形象店</li>
+					<li>广东省广州市天河区天河城四楼422-425</li>
+					<li>020-85585165</li>
+				</ul>
+				<a>查看详情</a>
+			</div>
+			<div class="iph">
+				<h1>1</h1>
+				<ul>
+					<strong style="line-height: 60px;">海南大道二店</strong>
+
+					<li>品牌形象店</li>
+					<li>广东省广州市天河区天河城四楼422-425</li>
+					<li>020-85585165</li>
+				</ul>
+				<a>查看详情</a>
+			</div>
+
+			<ul class="pagination">
+				<li class="disabled"><span>«</span></li>
+				<li class="active"><span>1</span></li>
+				<li>
+					<a href="">2</a>
+				</li>
+				<li>
+					<a href="">3</a>
+				</li>
+				<li>
+					<a href="">4</a>
+				</li>
+				<li>
+					<a href="" rel="next">»</a>
+				</li>
+			</ul>
+
+		</div>
+		
+		<!--适应-->
+		<section class="zsy-footer">
+              <h2 class="h-delta zsy-delta">用户服务</h2>
+              <ul class="icon-list shops-icons zsy-ft">
+                <li>
+                <span class="icon-wrapper">
+                  <span class="icons-shops icon-shop-sjjyz"></span>
+                </span>
+                  免费充电
+                </li>
+                <li>
+                <span class="icon-wrapper">
+                  <span class="icons-shops icon-shop-sx"></span>
+                </span>
+                  手机保养+维护
+                </li>
+                <li>
+                <span class="icon-wrapper">
+                  <span class="icons-shops icon-shop-wificl"></span>
+                </span>
+                  免费WIFI
+                </li>
+                <li>
+                <span class="icon-wrapper">
+                  <span class="icons-shops icon-shop-mfcy"></span>
+                </span>
+                  免费畅饮
+                </li>
+              </ul>
+              
+              <ul class="icon-list shops-icons">
+                <li>
+                <span class="icon-wrapper">
+                  <span class="icons-shops icon-shop-sjtm"></span>
+                </span> 
+                  手机贴膜
+                </li>
+                <li>
+                <span class="icon-wrapper">
+                  <span class="icons-shops icon-shop-hyjf"></span>
+                </span>
+                  积分兑换礼品
+                </li>
+              </ul>
+            </section>
+		
+		
+		
+		<footer>
+			<div style="width: 1220px; margin: 0 auto;">
+			<div class="foot">
+				<div class="foot-l">
+					<ul>
+						<a href="#">推荐机型</a>
+						<li>
+							<a href="#">R9s</a>
+						</li>
+						<li>
+							<a href="#">R9s Plus</a>
+						</li>
+						<li>
+							<a href="#">A57</a>
+						</li>
+						<li>
+							<a href="#">A59s</a>
+						</li>
+					</ul>
+					<ul>
+						<a href="#">在线购买</a>
+						<li>
+							<a href="#">官方商城</a>
+						</li>
+						<li>
+							<a href="#">购物指南</a>
+						</li>
+						<li>
+							<a href="#">官方授权店</a>
+						</li>
+					</ul>
+					<ul>
+						<a href="#">服务</a>
+						<li>
+							<a href="#">服务网点查询</a>
+						</li>
+						<li>
+							<a href="#">零配件价格查询</a>
+						</li>
+						<li>
+							<a href="#">云服务</a>
+						</li>
+					</ul>
+					<ul>
+						<a href="#">关于我们</a>
+						<li>
+							<a href="#">关于OPPO</a>
+						</li>
+						<li>
+							<a href="#">加入我们</a>
+						</li>
+						<li>
+							<a href="#">采购相关</a>
+						</li>
+						<li>
+							<a href="#">发布会回顾</a>
+						</li>
+					</ul>
+				</div>
+				<div class="foot-r">
+					<a href="#"><img src="img/icon-online.png" alt="" /></a>
+					<p class="phone">4001-666-888</p>
+					<p class="phcall">(24小时全国服务热线)</p>
+				</div>
+				<div class="fgx"></div>
+				<div class="foot-bottom">
+					<p>© 2005 - 2017 OPPO 版权所有 粤ICP备08130115号-1 联系方式：4001-666-888</p>
+					<a href="#" class="foot-ident"></a>
+					<div class="foot-bottom-r">
+						<p>关注我们：</p>
+						<div class="foot-logo1"></div>
+						<div class="foot-logo2"></div>
+						<div class="foot-logo3"></div>
+						<div class="wx-ewm"></div>
+						<div class="zfb-ewm"></div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</footer>
+
+<div class='navi-scroll'>
+			<div class="navi-scroll-content">
+				<a href="javascript:;" class="scroll-top-btn"><span>回到顶部</span><i></i></a>
+				<a href="wenjuan.html" target="_blank" class="survey-btn survey-btn-normal"><span>意见反馈</span><i></i></a>
+				<a href="wenjuan.html" class="survey-btn survey-btn-mobile"><span>意见反馈m</span><i></i></a>
+			</div>
+		</div>
+
+<!--自适应-->
+
+
+	</body>
+
+</html>

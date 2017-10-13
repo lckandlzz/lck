@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/login.css" />
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
+		<script type="text/javascript" src="js/login_a.js"></script>
+	</head>
+	<style type="text/css">
+		.lgnheader:hover{
+			transition: 0.8s;
+			transform: scale(1.2);
+		}
+		
+	</style>
+	<body>
+	<div class="wrapper">
+        <div class="header">
+            <div class="w960"> 
+                 <ul class="menu_sec">
+                    <li><a href="index.html">OPPO官网</a></li>
+                    <li><a href="">OPPO社区</a></li>
+                    <li><a href="">ColorOS</a></li>
+                    <div class="clear"></div>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+
+
+        <div class="login_box">
+            <div class="mainbox">
+                <!--头部logo-->
+                <div class="lgnheader">
+                    <div class="logo"></div>
+                    <h3 class="title">登录OPPO帐号可享受更多的服务</h3>
+                </div>
+                <!--主体登录框-->
+                <div class="login_area">
+                    <div class="login_form">
+                        <div class="input_area">
+                            <input type="text" id="username" name="username" autocomplete="off" class="username"  placeholder="请输入手机号码/邮箱/用户名">
+                            
+                        </div>
+                        <div class="error_tip" id="info_username" style="color: rgb(255, 86, 86);"></div>
+
+
+                        <div class="input_area">
+                            <input type="password" id="pwd" autocomplete="off" class="pwd"  placeholder="请输入帐号密码">
+                           
+                        </div>
+                        <div class="error_tip" id="info_pwd" style="color: rgb(255, 86, 86);"></div>
+
+                        <div id="captcha_area" style="display:none">
+                            <div class="input_area">
+                                <input type="text" id="vercode" class="vercode" name="captcha" autocomplete="off" placeholder="请输入验证码">
+                                
+                                <div class="pic">
+                                    <img src="/captcha?vertion=0.9262174611610727" alt="点击刷新验证码" title="点击刷新验证码" id="auth_code">
+                                </div>
+                            </div>
+
+                            <div class="error_tip" id="info_vercode"></div>
+                        </div>
+
+
+                        <div class="field">
+                            <a  class="text_green fr">登录遇到问题</a>
+                            <div class="clear"></div>
+
+                        </div>
+
+                        <input type="submit" class="button login_button mt30" value="登录"  style="margin-bottom:15px;">
+                        <input type="button" class="button register_button oppo-tj"  value="注册OPPO帐号">
+
+                        <div class="error_tip1" style="margin-top:10px;" ></div>
+
+                        <!--其他登录方式-->
+                        <div class="n_links_area">
+                            <div class="oth_type_list"></div>
+                            <div class="oth_type_links">
+                                <a class="other_link ico_qq oppo-tj" link="" ></a>
+                                <a class="other_link ico_wb oppo-tj" link=""></a>
+                                <a class="other_link ico_alipay oppo-tj" link=""></a>
+                                <a class="other_link ico_wx oppo-tj" link="" ></a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer_info">
+                <p>© 2005 - 2017 东莞市永盛通信科技有限公司 版权所有 粤ICP备08130115号-1</p>
+            </div>
+        </div>
+    </div>
+    <script>
+    	$(function(){
+    		$(".mt30").click(function(){
+    			$("#info_username").text("");
+    			$("#info_pwd").text("");
+//  			判断用户名和密码
+    			if($("#username").val().length>=6&&$("#pwd").val().length>=6){
+    				window.location.href='index.html';
+    				}
+//	    				判断格式
+	    				if($("#username").val().length<6){
+	    					if($("#username").val().length==""){
+	    						$("#info_username").text("请输入用户名")
+	    					}else{
+	    					$("#info_username").text("用户名输入错误")
+	    					}
+	    				} 
+	    				if($("#pwd").val().length<6){
+	    					if($("#pwd").val().length==""){
+	    						$("#info_pwd").text("请输入密码")
+	    					}else{
+	    						$("#info_pwd").text("密码输入错误")
+	    					}
+	    					
+	    					
+	    				}
+    			
+    		})
+    		
+    		
+    		
+    		
+    	})
+    </script>
+    <script type="text/javascript">
+    	
+    </script>
+	</body>
+</html>
